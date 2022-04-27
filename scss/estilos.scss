@@ -1,21 +1,23 @@
 @import 'variables';
+@import 'utilidades';
+@import 'button';
 
 body {
-    background: #fff6ee;
-    font-family: 'Roboto', sans-serif;
+    @include resetear-pm;
+    background: $color-fondo;
+    font-family: $fuente-body;
 }
 
 // INDEX
-
 /* estilos de imagenes de moda, calzados, kids y belleza */
 .card-image{
-    width: 100%;
-    margin: 5px 0px;
+    width: map-get($estilos, ancho100);
+    margin: map-get($estilos, margenAyA);
 }
 
 /* estilos de titulos */
 .title-sencillas{
-    font-family: 'Pacifico', cursive;
+    font-family: $fuente-titulos;
 }
 
 
@@ -24,6 +26,12 @@ body {
     animation-duration: 3.5s;
     animation-delay: 1s;
     animation-name: animar;
+    .cardindex{
+        &:hover{
+            box-shadow: #676767;
+            border: 3px solid black;
+        }
+    }
 }
 @keyframes animar{
     0%{
@@ -47,25 +55,14 @@ body {
     }
 
     100%{
-        background-color: #fff6ee;
+        background-color: $color-fondo;
     }
 }
 
 // BOTON DE OFERTAS
 #OFERTAS{
-    width: 200px;
-    height: 50px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    background-color: #fffb7c;
-    border-radius: 50px;
-    
-    animation-name: ofertas;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
+    @include boton($background-color: $color-tecero,
+                    $color: $color-letra);
     animation-name: ofertas;
     animation-duration: 3s;
     animation-iteration-count: infinite; /*CUANTAS VECES SE REPITE LA ANIMACION*/
@@ -78,57 +75,42 @@ body {
     }
 
     100%{
-        background-color: #fffb7c;
+        background-color: map-get($estilos, bg-color);
         /* transform: translateX(100%); */
     }
 }
-#OFERTAS a{
-    text-decoration: none;
-    text-decoration-line: none;
-    list-style: none;
-    color: black;
-    font-size: 20px;
-}
-#OFERTAS:hover{
-    box-shadow: grey;
-    background-color: #fff700;
-    border: 3px solid black;
+#OFERTAS{
+    a{
+        @include links();
+        font-size: map-get($estilos, tamanioletra)
+    }
+    &:hover{
+        box-shadow: grey;
+        background-color: $color-fondo-boton;
+        border: map-get($estilos, bradius);
+    }
 }
 
 
 .altura-a-b{
-    padding: 20px 0;
+    padding: map-get($estilos, rellenoAyA);
 }
 
 .logotipo{
-    height: 50px;
+    height: $alto - 50;
 }
 
 svg{ /*ESTILOS DE ICONOCES DE REDES SOCILAES*/
-    margin: 5px 0px;
-}
-
-/* ESTILOS DE LOGIN */
-.login-sesion{
-    ul{
-        li{
-            list-style: none;
-            a{
-                text-decoration: none;
-                text-decoration-line: none;
-                color: rgb(112, 112, 112);
-            }
-        }
-    }
+    margin: map-get($estilos, margenAyA)
 }
 
 
 /* image */
 .image-banner{
-    width: 100px;
+    width: $ancho;
 }
 
-
+// SECCION OFERTAS
 /* estilos de las cards */
 .card{
     border-radius: 30px;
@@ -138,7 +120,7 @@ svg{ /*ESTILOS DE ICONOCES DE REDES SOCILAES*/
 }
 
 .title-ofertas{
-    font-family: 'Pacifico', cursive;
+    font-family: $fuente-titulos;
 }
 
 
@@ -284,16 +266,16 @@ svg{ /*ESTILOS DE ICONOCES DE REDES SOCILAES*/
 
 /* SECCION CARRITO */
 #fila1{
-    border-bottom: 1px solid #e6e6e6;
-}
-#fila1 a{
-    text-decoration: none;
+    border-bottom: $linea-abajo-margen;
+    a{
+        text-decoration: none;
+    }
 }
 
 .carrito{
-    border-bottom: 2px solid black;
-    color: black;
-    margin: 0px 45px;
+    border-bottom: map-get($estilos, borde);
+    color: $color-tecero;
+    margin: map-get($estilos, margenleftyrigth);
 }
 
 .guardados{
@@ -301,26 +283,27 @@ svg{ /*ESTILOS DE ICONOCES DE REDES SOCILAES*/
 }
 
 .img-thumbnail{
-    width: 100px;
+    width: $ancho;
     height: auto;
 }
 
 
 .FilaOpciones{
-    list-style: none;
-    text-decoration: none;
-    text-decoration-line: none;
+    @include links;
 }
-.FilaOpciones li{
-    display: inline-block;
-}
-.FilaOpciones li a{
-    text-decoration: none;
-    margin: 0px 10px;
+.FilaOpciones{
+    li{
+        display: inline-block;
+        a{
+            text-decoration: none;
+            margin: 0px 10px;
+        }
+    }
 }
 
+
 .card1{
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: $linea-abajo-margen;
 }
 
 .card2{
@@ -328,7 +311,7 @@ svg{ /*ESTILOS DE ICONOCES DE REDES SOCILAES*/
 }
 
 .contenido{
-    border-bottom: 1px solid #e6e6e6;
+    @extend .card1;
     text-align: center;
 }
 .contenido{
@@ -351,12 +334,6 @@ svg{ /*ESTILOS DE ICONOCES DE REDES SOCILAES*/
 }
 
 // SECCION INGRESAR
-@mixin margin-t-b {
-    margin-top: 200px;
-    margin-bottom: 300px;
-}
-
-
 #form-ingresar{
     @include margin-t-b();
 }
@@ -372,4 +349,15 @@ svg{ /*ESTILOS DE ICONOCES DE REDES SOCILAES*/
 }
 .tyc2{
     @extend .tyc1;
+}
+
+// redes sociales footer
+
+// MAP------------------------
+$redes:(instagram: #dda5ff, facebook: #85b4ff, correo: #ffaaaa);
+
+@each $clave, $valor in $redes {
+    .btn-#{$clave}{
+        color: $valor;
+    }
 }

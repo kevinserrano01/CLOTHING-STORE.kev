@@ -1,7 +1,9 @@
 @charset "UTF-8";
 body {
+  padding: 0;
+  margin: 0;
   background: #fff6ee;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 /* estilos de imagenes de moda, calzados, kids y belleza */
 .card-image {
@@ -10,13 +12,16 @@ body {
 
 /* estilos de titulos */
 .title-sencillas {
-  font-family: 'Pacifico', cursive; }
+  font-family: "Pacifico", cursive; }
 
 /* estilos de animacion________________________________________________________________________ */
 .animation {
   animation-duration: 3.5s;
   animation-delay: 1s;
   animation-name: animar; }
+  .animation .cardindex:hover {
+    box-shadow: #676767;
+    border: 3px solid black; }
 
 @keyframes animar {
   0% {
@@ -38,13 +43,13 @@ body {
     background-color: #fff6ee; } }
 
 #OFERTAS {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
   width: 200px;
   height: 50px;
   margin-top: 40px;
   margin-bottom: 40px;
-  background-color: #fffb7c;
-  border-radius: 50px;
-  animation-name: ofertas;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,8 +78,7 @@ body {
 
 #OFERTAS:hover {
   box-shadow: grey;
-  background-color: #fff700;
-  border: 3px solid black; }
+  background-color: #fff700; }
 
 .altura-a-b {
   padding: 20px 0; }
@@ -85,14 +89,6 @@ body {
 svg {
   /*ESTILOS DE ICONOCES DE REDES SOCILAES*/
   margin: 5px 0px; }
-
-/* ESTILOS DE LOGIN */
-.login-sesion ul li {
-  list-style: none; }
-  .login-sesion ul li a {
-    text-decoration: none;
-    text-decoration-line: none;
-    color: #707070; }
 
 /* image */
 .image-banner {
@@ -106,7 +102,7 @@ svg {
   border-radius: 30px 30px 0 0; }
 
 .title-ofertas {
-  font-family: 'Pacifico', cursive; }
+  font-family: "Pacifico", cursive; }
 
 /* estilos de animacion */
 .animation {
@@ -232,12 +228,11 @@ svg {
 /* SECCION CARRITO */
 #fila1 {
   border-bottom: 1px solid #e6e6e6; }
-
-#fila1 a {
-  text-decoration: none; }
+  #fila1 a {
+    text-decoration: none; }
 
 .carrito {
-  border-bottom: 2px solid black;
+  border-bottom: 3px solid black;
   color: black;
   margin: 0px 45px; }
 
@@ -249,25 +244,24 @@ svg {
   height: auto; }
 
 .FilaOpciones {
-  list-style: none;
   text-decoration: none;
-  text-decoration-line: none; }
+  text-decoration-line: none;
+  list-style: none;
+  color: black; }
 
 .FilaOpciones li {
   display: inline-block; }
+  .FilaOpciones li a {
+    text-decoration: none;
+    margin: 0px 10px; }
 
-.FilaOpciones li a {
-  text-decoration: none;
-  margin: 0px 10px; }
-
-.card1 {
+.card1, .contenido {
   border-bottom: 1px solid #e6e6e6; }
 
 .card2 {
   margin-bottom: 600px; }
 
 .contenido {
-  border-bottom: 1px solid #e6e6e6;
   text-align: center; }
 
 .contenido p {
@@ -294,3 +288,12 @@ svg {
 .tyc1, .tyc2 {
   color: #266bea;
   text-decoration: underline; }
+
+.btn-instagram {
+  color: #dda5ff; }
+
+.btn-facebook {
+  color: #85b4ff; }
+
+.btn-correo {
+  color: #ffaaaa; }
