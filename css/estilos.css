@@ -1,0 +1,296 @@
+@charset "UTF-8";
+body {
+  background: #fff6ee;
+  font-family: 'Roboto', sans-serif; }
+
+/* estilos de imagenes de moda, calzados, kids y belleza */
+.card-image {
+  width: 100%;
+  margin: 5px 0px; }
+
+/* estilos de titulos */
+.title-sencillas {
+  font-family: 'Pacifico', cursive; }
+
+/* estilos de animacion________________________________________________________________________ */
+.animation {
+  animation-duration: 3.5s;
+  animation-delay: 1s;
+  animation-name: animar; }
+
+@keyframes animar {
+  0% {
+    transform: scale(0.3);
+    border-radius: 100%; } }
+
+#animation-map {
+  animation-name: mapa;
+  animation-duration: 4s;
+  animation-delay: 3s; }
+
+@keyframes mapa {
+  0% {
+    /*cuando la animacion aun no arranco entonces...*/
+    background: #000000; }
+  50% {
+    background-color: #000000; }
+  100% {
+    background-color: #fff6ee; } }
+
+#OFERTAS {
+  width: 200px;
+  height: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #fffb7c;
+  border-radius: 50px;
+  animation-name: ofertas;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation-name: ofertas;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /*CUANTAS VECES SE REPITE LA ANIMACION*/
+  animation-direction: alternate;
+  /*de 0 a 100% o alternado*/ }
+
+@keyframes ofertas {
+  0% {
+    background-color: #878787;
+    transform: translate(0); }
+  100% {
+    background-color: #fffb7c;
+    /* transform: translateX(100%); */ } }
+
+#OFERTAS a {
+  text-decoration: none;
+  text-decoration-line: none;
+  list-style: none;
+  color: black;
+  font-size: 20px; }
+
+#OFERTAS:hover {
+  box-shadow: grey;
+  background-color: #fff700;
+  border: 3px solid black; }
+
+.altura-a-b {
+  padding: 20px 0; }
+
+.logotipo {
+  height: 50px; }
+
+svg {
+  /*ESTILOS DE ICONOCES DE REDES SOCILAES*/
+  margin: 5px 0px; }
+
+/* ESTILOS DE LOGIN */
+.login-sesion ul li {
+  list-style: none; }
+  .login-sesion ul li a {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: #707070; }
+
+/* image */
+.image-banner {
+  width: 100px; }
+
+/* estilos de las cards */
+.card {
+  border-radius: 30px; }
+
+.card-img-top {
+  border-radius: 30px 30px 0 0; }
+
+.title-ofertas {
+  font-family: 'Pacifico', cursive; }
+
+/* estilos de animacion */
+.animation {
+  animation-duration: 3.5s;
+  animation-delay: 2s;
+  animation-name: animar; }
+
+@keyframes animar {
+  0% {
+    transform: scale(0.3);
+    border-radius: 100%; } }
+
+.a2 {
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-name: a22; }
+
+@keyframes a22 {
+  0% {
+    transform: scale(0.3);
+    border-radius: 100%; } }
+
+.a3 {
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-name: a33; }
+
+@keyframes a33 {
+  0% {
+    transform: scale(0.3);
+    border-radius: 100%; } }
+
+.a4 {
+  animation-duration: 2s;
+  animation-delay: 5s;
+  animation-name: a44; }
+
+@keyframes a44 {
+  0% {
+    transform: scale(0.3);
+    border-radius: 100%; } }
+
+#titulo-Categoria {
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-name: title;
+  color: #ffffff;
+  animation-iteration-count: infinite;
+  /*CUANTAS VECES SE REPITE LA ANIMACION*/
+  animation-direction: alternate;
+  /*de 0 a 100% o alternado*/ }
+
+@keyframes title {
+  0% {
+    color: #ebff0d; }
+  100% {
+    color: #ffffff; } }
+
+#Hombre {
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-name: titleHombre;
+  color: #ffffff;
+  animation-iteration-count: infinite;
+  /*CUANTAS VECES SE REPITE LA ANIMACION*/
+  animation-direction: alternate;
+  /*de 0 a 100% o alternado*/ }
+
+@keyframes titleHombre {
+  0% {
+    color: #6dcb60; }
+  100% {
+    color: #ffffff; } }
+
+#Mujer {
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-name: titleMujer;
+  color: #ffffff;
+  animation-iteration-count: infinite;
+  /*CUANTAS VECES SE REPITE LA ANIMACION*/
+  animation-direction: alternate;
+  /*de 0 a 100% o alternado*/ }
+
+@keyframes titleMujer {
+  0% {
+    color: #f88fff; }
+  100% {
+    color: #ffffff; } }
+
+#Niños {
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-name: titleNinios;
+  color: #ffffff;
+  animation-iteration-count: infinite;
+  /*CUANTAS VECES SE REPITE LA ANIMACION*/
+  animation-direction: alternate;
+  /*de 0 a 100% o alternado*/ }
+
+@keyframes titleNinios {
+  0% {
+    color: #2038ed; }
+  100% {
+    color: #ffffff; } }
+
+#Calzados {
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-name: titleCalzados;
+  color: #ffffff;
+  animation-iteration-count: infinite;
+  /*CUANTAS VECES SE REPITE LA ANIMACION*/
+  animation-direction: alternate;
+  /*de 0 a 100% o alternado*/ }
+
+@keyframes titleCalzados {
+  0% {
+    color: #ffd063; }
+  100% {
+    color: #ffffff; } }
+
+/* SECCION CARRITO */
+#fila1 {
+  border-bottom: 1px solid #e6e6e6; }
+
+#fila1 a {
+  text-decoration: none; }
+
+.carrito {
+  border-bottom: 2px solid black;
+  color: black;
+  margin: 0px 45px; }
+
+.guardados {
+  margin: 0px 45px; }
+
+.img-thumbnail {
+  width: 100px;
+  height: auto; }
+
+.FilaOpciones {
+  list-style: none;
+  text-decoration: none;
+  text-decoration-line: none; }
+
+.FilaOpciones li {
+  display: inline-block; }
+
+.FilaOpciones li a {
+  text-decoration: none;
+  margin: 0px 10px; }
+
+.card1 {
+  border-bottom: 1px solid #e6e6e6; }
+
+.card2 {
+  margin-bottom: 600px; }
+
+.contenido {
+  border-bottom: 1px solid #e6e6e6;
+  text-align: center; }
+
+.contenido p {
+  display: inline-block;
+  margin: 0px 10px;
+  padding: 30px; }
+
+.boton-comprar {
+  padding: 40px 0px;
+  text-align: center; }
+
+.m-gris {
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6; }
+
+#form-ingresar {
+  margin-top: 200px;
+  margin-bottom: 300px; }
+
+#form-registrar {
+  margin-top: 200px;
+  margin-bottom: 300px; }
+
+.tyc1, .tyc2 {
+  color: #266bea;
+  text-decoration: underline; }
